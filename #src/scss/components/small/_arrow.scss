@@ -1,0 +1,41 @@
+.swiper__arrow {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	cursor: pointer;
+	background-color: transparent;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		width: 4px;
+		height: 18px;
+		border-radius: 4px;
+		background-color: $brandColor;
+	}
+
+	&--prev {
+		transform: translateX(-110%);
+		&::before {
+			transform: translate(-50%, 5px) rotate(45deg);
+		}
+		&::after {
+			transform: translate(-50%, 15px) rotate(-45deg);
+		}
+	}
+
+	&--next {
+		transform: translateX(10%);
+		&::before {
+			transform: translate(-50%, 5px) rotate(-45deg);
+		}
+		&::after {
+			transform: translate(-50%, 15px) rotate(45deg);
+		}
+	}
+}

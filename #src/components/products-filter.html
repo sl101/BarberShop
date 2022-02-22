@@ -1,0 +1,174 @@
+<section class="products-filter" id="product-filter">
+	<h2 class="sr-only">
+		Products filter
+	</h2>
+	<div class="_container">
+		<div class="products-filter__content">
+
+			<aside class="products-filter__aside filter-product">
+				<div class="products-filter__header">
+					<div class="filter-product__title">
+						Filters
+						<button class="filter-product__decor decor-filter _hoverBg" type="button">
+							<span class="decor-filter__middle"></span>
+						</button>
+					</div>
+					<button class="products-filter__filter filter-btn _hoverBtn" type="button">
+						<span class="filter-btn__square"></span>
+						<span class="filter-btn__square"></span>
+						<span class="filter-btn__square filter-btn__square--fat"></span>
+						<span class="filter-btn__square"></span>
+					</button>
+				</div>
+				<nav class="products-filter__menu menu-filter">
+					<ul class="menu-filter__list">
+						<li class="menu-filter__item">
+							<a class="menu-filter__link" href="#">List</a>
+						</li>
+						<li class="menu-filter__item">
+							<a class="menu-filter__link _checked" href="#">Tile</a>
+						</li>
+						<li class="menu-filter__item">
+							<a class="menu-filter__link" href="#">Image</a>
+						</li>
+					</ul>
+				</nav>
+				<form class="products-filter__form" action="#">
+					<button class="products-filter__burger burger" type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<ul class="filter-product__list">
+						<li class="filter-product__item filter-item">
+							<div class="filter-item__title">
+								Choose a services
+							</div>
+							<ul class="filter-item__list filter__list--checkbox">
+								<li class="filter__item">
+									<label class="filter__label filter__label--checkbox">
+										<input class="filter__input" type="checkbox" name="namecheckbox_1" checked>
+										<span class="filter__name filter__name--checkbox">
+											Men's haircut
+										</span>
+									</label>
+								</li>
+								<li class="filter__item">
+									<label class="filter__label filter__label--checkbox">
+										<input class="filter__input" type="checkbox" name="namecheckbox_2" checked>
+										<span class="filter__name filter__name--checkbox">
+											Drying
+										</span>
+									</label>
+								</li>
+								<li class="filter__item">
+									<label class="filter__label filter__label--checkbox">
+										<input class="filter__input" type="checkbox" name="namecheckbox_3">
+										<span class="filter__name filter__name--checkbox">
+											Shaving
+										</span>
+									</label>
+								</li>
+								<li class="filter__item">
+									<label class="filter__label filter__label--checkbox">
+										<input class="filter__input" type="checkbox" name="namecheckbox_4">
+										<span class="filter__name filter__name--checkbox">
+											Crop close
+										</span>
+									</label>
+								</li>
+								<li class="filter__item">
+									<label class="filter__label filter__label--checkbox">
+										<input class="filter__input" type="checkbox" name="namecheckbox_5" checked>
+										<span class="filter__name filter__name--checkbox">
+											Wash hair
+										</span>
+									</label>
+								</li>
+							</ul>
+						</li>
+
+						<li class="filter-product__item filter-item">
+							<div class="filter-item__title">
+								Choose a master
+							</div>
+							<ul class="filter-item__list filter__list--radiobutton">
+								<li class="filter__item">
+									<label class="filter__label filter__label--radiobutton">
+										<input class="filter__input" type="radio" name="nameradio" value="1">
+										<span class="filter__name filter__name--radio">
+											Alex
+										</span>
+									</label>
+								</li>
+								<li class="filter__item">
+									<label class="filter__label filter__label--radiobutton">
+										<input class="filter__input" type="radio" name="nameradio" value="2">
+										<span class="filter__name filter__name--radio">
+											Jorge Jones
+										</span>
+									</label>
+								</li>
+								<li class="filter__item">
+									<label class="filter__label filter__label--radiobutton">
+										<input class="filter__input" type="radio" name="nameradio" value="3" checked>
+										<span class="filter__name filter__name--radio">
+											Dart Vaider
+										</span>
+									</label>
+								</li>
+								<li class="filter__item">
+									<label class="filter__label filter__label--radiobutton">
+										<input class="filter__input" type="radio" name="nameradio" value="4">
+										<span class="filter__name filter__name--radio">
+											SpongeBob Squarepants
+										</span>
+									</label>
+								</li>
+							</ul>
+						</li>
+
+						<li class="filter-product__item filter-item">
+							<div class="filter-item__title">
+								Choose a price
+							</div>
+							<div class="price-filter">
+								<div class="price-filter__line"></div>
+								<ul class="price-filter__list">
+									<li class="price-filter__item">
+										<label class="price-filter__label">
+											<span>From:</span>
+											<input class="price-filter__input price-filter__input--start" type="text">
+										</label>
+									</li>
+
+									<li class="price-filter__item">
+										<label class="price-filter__label">
+											<span>To:</span>
+											<input class="price-filter__input price-filter__input--end" type="text">
+										</label>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+
+					<button class="filter-product__button link link--shop" type="button">
+						show
+					</button>
+				</form>
+
+			</aside>
+
+			<div class="products-filter__gallery">
+				@include('cart_1.html',{})
+				@include('cart_1.html',{})
+				@include('cart_1.html',{})
+				@include('cart_1.html',{})
+				@include('cart_1.html',{})
+				@include('cart_1.html',{})
+			</div>
+
+		</div>
+	</div>
+</section>

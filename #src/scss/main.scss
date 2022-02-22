@@ -1,0 +1,34 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "reset";
+@import "forms";
+@import "global";
+@import "functions";
+
+// little components
+@import "components/small/_hovers.scss";
+@import "components/small/decor.scss";
+@import "components/small/keyframes.scss";
+@import "components/small/swiper-team.scss";
+@import "components/small/slider-team.scss";
+
+// подключения компонентов страницы
+@import "components/header.scss";
+@import "components/hero.scss";
+@import "components/cart.scss";
+@import "components/services.scss";
+@import "components/team.scss";
+@import "components/booking.scss";
+@import "components/products.scss";
+@import "components/review.scss";
+@import "components/contacts.scss";
+@import "components/footer.scss";
+@import "components/popup.scss";
+@import "components/contact-us.scss";
+@import "components/hero-shop.scss";
+@import "components/search.scss";
+@import "components/products-filter.scss";
+@import "components/products-shop.scss";
+@import "components/product-page.scss";

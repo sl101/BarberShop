@@ -1,0 +1,42 @@
+//BUTTONS====================================
+.button {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+//LABEL =======================================
+.label {
+	cursor: pointer;
+	padding: 0 0 0 20px;
+	color: $blackTextColor;
+}
+//INPUT =======================================
+textarea.input,
+.input {
+	border: 1px solid $grey;
+	border-radius: 4px;
+	width: 100%;
+	display: block;
+	padding: 0 20px;
+	font-weight: 500;
+	transition: all $hoverTime ease;
+
+	&::placeholder {
+		color: $lightGrey;
+		font-weight: 400;
+	}
+
+	@include md-min {
+		&:hover {
+			border-color: $darkGrey;
+		}
+		&:focus {
+			border-color: $brandHoverColor;
+			outline: none;
+			caret-color: $brandHoverColor;
+		}
+		&:active {
+			border-color: $brandHoverColor;
+		}
+	}
+}

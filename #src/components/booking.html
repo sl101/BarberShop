@@ -1,0 +1,147 @@
+<section class="booking">
+	<h2 class="sr-only">
+		Book an appointment right now!
+	</h2>
+
+	<div class="_container">
+		<div class="booking__content">
+			<span class="booking__subtitle">
+				Book an appointment right now!
+			</span>
+			<span class="booking__description">
+				Please complete all these fields.
+			</span>
+
+			<form class="booking__form form" action="#">
+
+				<div class="booking__block-input">
+
+					<label class="booking__label booking__label--name label">
+						<span class="booking__label-name">
+							Name:
+						</span>
+						<input class="booking__input booking__input--name input _req _name" type="text" name="name"
+							autocomplete="off" placeholder="Gregory Simmmons" required>
+					</label>
+
+					<label class="booking__label booking__label--date label">
+						<span class="booking__label-name">
+							Date:
+						</span>
+						<input class="booking__input booking__input--date input _req _date" type="date" name="date"
+							autocomplete="off" required>
+					</label>
+
+					<label class="booking__label booking__label--time label">
+						<span class="booking__label-name">
+							Time:
+						</span>
+						<input class="booking__input booking__input--time input _req _time" type="time" name="time"
+							autocomplete="off" required>
+					</label>
+				</div>
+
+				<div class="booking__filter filter filter--radiobutton">
+					<span class="filter__title">
+						Choose a master:
+					</span>
+					<ul class="filter__list filter__list--radiobutton">
+						<li class="filter__item">
+							<label class="filter__label filter__label--radiobutton">
+								<input class="filter__input" type="radio" name="nameradio" value="1">
+								<span class="filter__name filter__name--radio">
+									Alex
+								</span>
+							</label>
+						</li>
+						<li class="filter__item">
+							<label class="filter__label filter__label--radiobutton">
+								<input class="filter__input" type="radio" name="nameradio" value="2">
+								<span class="filter__name filter__name--radio">
+									Jorge Jones
+								</span>
+							</label>
+						</li>
+						<li class="filter__item">
+							<label class="filter__label filter__label--radiobutton">
+								<input class="filter__input" type="radio" name="nameradio" value="3" checked>
+								<span class="filter__name filter__name--radio">
+									Dart Vaider
+								</span>
+							</label>
+						</li>
+						<li class="filter__item">
+							<label class="filter__label filter__label--radiobutton">
+								<input class="filter__input" type="radio" name="nameradio" value="4">
+								<span class="filter__name filter__name--radio">
+									SpongeBob Squarepants
+								</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+
+				<div class="booking__filter filter filter--checkbox">
+					<span class="filter__title">
+						Choose a services:
+					</span>
+					<ul class="filter__list filter__list--checkbox">
+						<li class="filter__item">
+							<label class="filter__label filter__label--checkbox">
+								<input class="filter__input" type="checkbox" name="namecheckbox_1" checked>
+								<span class="filter__name filter__name--checkbox">
+									Men's haircut
+								</span>
+							</label>
+						</li>
+						<li class="filter__item">
+							<label class="filter__label filter__label--checkbox">
+								<input class="filter__input" type="checkbox" name="namecheckbox_2" checked>
+								<span class="filter__name filter__name--checkbox">
+									Crop close
+								</span>
+							</label>
+						</li>
+						<li class="filter__item">
+							<label class="filter__label filter__label--checkbox">
+								<input class="filter__input" type="checkbox" name="namecheckbox_3">
+								<span class="filter__name filter__name--checkbox">
+									Drying
+								</span>
+							</label>
+						</li>
+						<li class="filter__item">
+							<label class="filter__label filter__label--checkbox">
+								<input class="filter__input" type="checkbox" name="namecheckbox_4">
+								<span class="filter__name filter__name--checkbox">
+									Wash hair
+								</span>
+							</label>
+						</li>
+						<li class="filter__item">
+							<label class="filter__label filter__label--checkbox">
+								<input class="filter__input" type="checkbox" name="namecheckbox_5" checked>
+								<span class="filter__name filter__name--checkbox">
+									Shaving
+								</span>
+							</label>
+						</li>
+						<li class="filter__item">
+							<label class="filter__label filter__label--checkbox">
+								<input class="filter__input" type="checkbox" name="namecheckbox_6" checked>
+								<span class="filter__name filter__name--checkbox">
+									Hot shave
+								</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+
+				<button class="booking__button link link--order" type="submit">
+					Book now
+				</button>
+
+			</form>
+		</div>
+	</div>
+</section>

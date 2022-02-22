@@ -1,0 +1,184 @@
+@import "../../mixins";
+
+.swiper-team {
+	overflow: hidden;
+	padding: 13px 0;
+	margin: 0 auto;
+
+	@include xl {
+		padding: 17px 0;
+		align-self: center;
+	}
+
+	@include sm {
+		padding: 25px 0;
+	}
+
+	// .swiper-team__arrow
+	&__arrow {
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		bottom: 23px;
+		width: 40px;
+		height: 40px;
+		border-radius: 100%;
+		cursor: pointer;
+		background-color: transparent;
+
+		&--prev {
+			left: 0px;
+		}
+
+		&--next {
+			right: 5px;
+		}
+
+		@include sm {
+			display: none;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 3px;
+			height: 18px;
+			border-radius: 4px;
+			background-color: $brandColor;
+		}
+
+		&--prev {
+			&::before {
+				transform: translate(-50%, 5px) rotate(45deg);
+			}
+			&::after {
+				transform: translate(-50%, 16px) rotate(-45deg);
+			}
+		}
+
+		&--next {
+			transform: translateX(10%);
+			&::before {
+				transform: translate(-50%, 5px) rotate(-45deg);
+			}
+			&::after {
+				transform: translate(-50%, 16px) rotate(45deg);
+			}
+		}
+	}
+
+	.swiper-pagination-bullets {
+		bottom: 20px;
+		left: auto;
+		right: 3px;
+		z-index: 4;
+	}
+
+	// .swiper-team__pagination
+	&__pagination {
+		display: none;
+
+		@include sm {
+			display: flex;
+			position: absolute;
+			flex-direction: column;
+			justify-content: space-between;
+			max-width: 9px;
+			height: 105px;
+		}
+
+		.swiper-pagination-bullet {
+			width: 9px;
+			height: 9px;
+			border-radius: 100%;
+			border-width: 1px;
+			border-style: solid;
+			opacity: 1;
+		}
+
+		.swiper-pagination-bullet-active {
+			background-color: transparent;
+		}
+	}
+
+	// .swiper-team__wrapper
+	&__wrapper {
+		display: flex;
+	}
+}
+
+.swiper-slide {
+	position: relative;
+	z-index: 3;
+	flex: 0 0 134px;
+	min-height: 200px;
+	cursor: pointer;
+
+	@include xl {
+		flex: 0 0 130px;
+		min-height: 193px;
+	}
+
+	@include sm {
+		flex: 0 0 202px;
+		max-width: 202px;
+		min-height: 300px;
+	}
+
+	&.swiper-slide-active {
+		position: relative;
+		z-index: 4;
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: -11px;
+			left: 25px;
+			width: 122px;
+			min-height: 222px;
+			border: 3px solid $brandColor;
+
+			@include xl {
+				top: -10px;
+				left: 10px;
+				width: 132px;
+				min-height: 214px;
+			}
+
+			@include sm {
+				top: -14px;
+				left: 27px;
+				width: 190px;
+				min-height: 333px;
+			}
+		}
+	}
+
+	// .swiper-slide__image
+	&__image {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		min-height: 200px;
+		object-fit: cover;
+		background-color: $black-20;
+
+		@include xl {
+			min-height: 193px;
+		}
+
+		@include sm {
+			min-height: 300px;
+		}
+	}
+}
+
+.swiper-button-disabled {
+	opacity: 0.4;
+	pointer-events: none;
+}

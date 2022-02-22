@@ -1,0 +1,40 @@
+<section class="request">
+	<h2 class="request__title">
+		Contact us!
+	</h2>
+
+	<span class="request__description">
+		Please leave your details and our manager will contact you within an hour.
+	</span>
+
+	<form class="request__form form" action="#" id="form" method="post">
+
+		<label class="request__label label">
+			Name:
+			<input class="request__input request__input--name input _req _name" type="text" name="name"
+				data-validate-field="name" autocomplete="off" placeholder="Gregory Simmmons" required>
+		</label>
+
+		<label class="request__label label">
+			Email:
+			<input class="request__input request__input--email input _req _email" type="email" name="email"
+				data-validate-field="email" autocomplete="off" placeholder="dwight.fleming@example.com" required>
+		</label>
+
+		<label class="request__label label">
+			Phone:
+			<input class="request__input request__input--phone input _req _phone" type="tel" name="tel"
+				data-validate-field="tel" autocomplete="off" placeholder="+38 (099) 999-9999" required>
+		</label>
+
+		<label class="request__label label">
+			Your comment:
+			<textarea class="request__input request__input--text input _req _text"
+				placeholder="Please leave your comment..."></textarea>
+		</label>
+
+		<button class="request__button link link--order" type="submit">
+			contact me
+		</button>
+	</form>
+</section>

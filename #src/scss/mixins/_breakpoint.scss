@@ -1,0 +1,31 @@
+@import "../vars";
+
+@mixin sm {
+	@media only screen and (max-width: #{$screen-sm + px}) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media only screen and (max-width: #{$screen-md + px}) {
+		@content;
+	}
+}
+
+@mixin md-min {
+	@media only screen and (min-width: #{$screen-md + px}) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media only screen and (max-width: #{$screen-lg + px}) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media only screen and (max-width: #{$screen-xl + px}) {
+		@content;
+	}
+}

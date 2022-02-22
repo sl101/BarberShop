@@ -1,0 +1,77 @@
+@import "../mixins";
+
+.team {
+	text-align: right;
+	padding: 85px 0 63px;
+
+	@include xl {
+		padding: 55px 0 57px;
+	}
+
+	@include lg {
+		padding: 55px 0 0;
+	}
+
+	@include sm {
+		padding: 28px 0 10px;
+	}
+
+	// .team__container
+	&__container {
+		max-width: $maxWidthContainer + 55;
+
+		@include lg {
+			max-width: $maxWidthContainer;
+		}
+	}
+
+	// .team__title
+	&__title {
+		margin: 0 36px 70px 0;
+
+		@include xl {
+			margin: 0 15px 106px 0;
+		}
+
+		@include lg {
+			margin: 0 0 54px 0;
+			padding: 0 0 0 17px;
+			word-spacing: 10px;
+		}
+
+		@include sm {
+			margin: 0 1px 8px 0;
+			word-spacing: 5px;
+		}
+	}
+
+	// .team__content
+	&__content {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@include xl {
+			justify-content: center;
+		}
+
+		@include sm {
+			justify-content: start;
+		}
+	}
+
+	// .team__description
+	&__description {
+		min-height: 305px;
+	}
+
+	.swiper-pagination-bullet {
+		background-color: $brandColor;
+		border-color: $brandColor;
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: transparent;
+	}
+}

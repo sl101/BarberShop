@@ -1,0 +1,50 @@
+@import "../vars";
+
+.request {
+	display: block;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: $white;
+
+	// .request__title
+	&__title {
+		text-align: center;
+		font-weight: 700;
+		font-size: 32px;
+		margin: 0 0 18px 0;
+	}
+
+	// .request__description
+	&__description {
+		display: block;
+		max-width: 400px;
+		text-align: center;
+		margin: 0 auto 54px;
+	}
+
+	// .request__form
+	&__form {
+		display: block;
+		max-width: 600px;
+		width: 100%;
+	}
+
+	// .request__input
+	&__input {
+		padding: 8px 20px;
+		margin: 5px 0 24px 0;
+	}
+
+	// .request__input--text
+	&__input--text {
+		min-height: 94px;
+		margin: 0 0 35px 0;
+	}
+
+	// .request__button
+	&__button {
+		max-width: 176px;
+		margin: 0 auto;
+	}
+}

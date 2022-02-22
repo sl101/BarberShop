@@ -1,0 +1,121 @@
+//<Hover>=====================
+._hover,
+._hoverSVG,
+._hoverBtn,
+._hoverBg {
+	outline: transparent;
+	border: 1px solid transparent;
+	transition: all $hoverTime ease;
+}
+
+._hover {
+	&::before,
+	&::after {
+		transition: all $hoverTime ease;
+	}
+	@include md-min {
+		&:hover {
+			color: $brandHoverColor;
+			&::before,
+			&::after {
+				background-color: $brandHoverColor;
+			}
+		}
+
+		&:focus {
+			border-top-color: $brandHoverColor;
+			border-bottom-color: $brandHoverColor;
+			color: $brandHoverColor;
+			&::before,
+			&::after {
+				background-color: $brandHoverColor;
+			}
+		}
+
+		&:active {
+			border-top-color: transparent;
+			border-bottom-color: $brandHoverColor;
+			color: $brandHoverColor;
+			&::before,
+			&::after {
+				background-color: $brandHoverColor;
+			}
+		}
+	}
+}
+
+._hoverSVG {
+	& svg,
+	& span {
+		transition: all $hoverTime ease;
+	}
+
+	@include md-min {
+		&:focus svg,
+		&:focus span,
+		&:focus {
+			border-top-color: $brandHoverColor;
+			border-bottom-color: $brandHoverColor;
+			color: $brandHoverColor;
+			fill: $brandHoverColor;
+		}
+
+		&:hover svg,
+		&:hover span,
+		&:hover {
+			border-color: transparent;
+			color: $brandHoverColor;
+			fill: $brandHoverColor;
+		}
+
+		&:active {
+			border-top-color: transparent;
+			border-bottom-color: $brandHoverColor;
+		}
+	}
+}
+
+._hoverBtn {
+	& span {
+		transition: all $hoverTime ease;
+	}
+
+	@include md-min {
+		&:hover span {
+			border-color: $brandHoverColor;
+		}
+
+		&:focus {
+			border-top-color: $brandHoverColor;
+			border-bottom-color: $brandHoverColor;
+		}
+
+		&:hover {
+			border-color: transparent;
+		}
+
+		&:active {
+			border-top-color: transparent;
+			border-bottom-color: $brandHoverColor;
+		}
+	}
+}
+
+._hoverBg {
+	@include md-min {
+		&:hover span,
+		&:hover span::before,
+		&:hover span::after {
+			background-color: $brandHoverColor;
+		}
+
+		&:active {
+			background-color: $brandHoverColor;
+			background-color: $lightTextColor;
+		}
+
+		&:focus {
+			background-color: $lightTextColor;
+		}
+	}
+}

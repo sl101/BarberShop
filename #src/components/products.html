@@ -1,0 +1,31 @@
+<section class="products gallery" id="gallery">
+	<div class="products__container _container">
+		<h2 class="products__title title scroll-item">
+			Popular products
+		</h2>
+
+		<div class="product-swiper swiper">
+			<div class="product-swiper__wrapper swiper__wrapper">
+				<div class="product-swiper__slide swiper__slide">
+					@include('cart_1.html',{})
+				</div>
+				<div class="product-swiper__slide swiper__slide">
+					@include('cart_1.html',{})
+				</div>
+				<div class="product-swiper__slide swiper__slide">
+					@include('cart_1.html',{})
+				</div>
+				<div class="product-swiper__slide swiper__slide">
+					@include('cart_1.html',{})
+				</div>
+			</div>
+
+			<button
+				class="product-swiper__arrow product-swiper__arrow--prev swiper-team__arrow swiper-team__arrow--prev _hoverSVG"
+				type="button"></button>
+			<button
+				class="product-swiper__arrow product-swiper__arrow--next swiper-team__arrow swiper-team__arrow--next _hoverSVG"
+				type="button"></button>
+		</div>
+	</div>
+</section>

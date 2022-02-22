@@ -1,0 +1,263 @@
+@import "../mixins";
+
+.product-page {
+	min-height: 100vh;
+	padding: 150px 0 50px 0;
+	margin: auto 0;
+
+	@include md {
+		padding: 100px 0 50px 0;
+	}
+}
+
+.product-item {
+	margin: 100px 0 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	// .product-item__view
+	&__view {
+		flex: 1 1 400px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+
+		@include lg {
+			margin: 0 0 50px 0;
+		}
+	}
+
+	// .product-item__tab-nav
+	&__tab-nav {
+		padding: 7px;
+	}
+
+	// .product-item__tab
+	&__tab {
+		display: block;
+		width: 70px;
+		height: 70px;
+		cursor: pointer;
+		border: 1px solid transparent;
+		box-shadow: 2px 2px 5px 0 $black-20;
+		transition: all $hoverTime ease;
+		opacity: 0;
+		transform: translateX(-50px);
+
+		&.animation-class {
+			opacity: 1;
+			transform: translateX(0);
+
+			&:nth-child(2) {
+				transition-delay: $hoverTime;
+			}
+			&:nth-child(3) {
+				transition-delay: $hoverTime * 2;
+			}
+			&:nth-child(4) {
+				transition-delay: $hoverTime * 3;
+			}
+			&:nth-child(5) {
+				transition-delay: $hoverTime * 4;
+			}
+		}
+
+		&:not(:last-child) {
+			margin: 0 0 15px 0;
+		}
+
+		&:hover {
+			box-shadow: 4px 4px 5px 0 $brandHoverColor;
+		}
+
+		&:active {
+			border-color: $brandColor;
+		}
+
+		&:focus {
+			border-color: $brandColor;
+		}
+	}
+
+	// .product-item__picture
+	&__picture {
+		object-fit: cover;
+	}
+
+	// .product-item__tab-body
+	&__tab-body {
+		max-width: 325px;
+		width: 100%;
+		margin: 0 auto;
+		opacity: 0;
+		transition: all $hoverTime ease;
+
+		&.animation-class {
+			opacity: 1;
+		}
+	}
+
+	// .product-item__image
+	&__image {
+		display: none;
+		object-fit: cover;
+		transition: all $hoverTime ease;
+
+		& .product__img:hover {
+			transform: none;
+		}
+
+		&._active {
+			display: block;
+		}
+	}
+
+	// .product-item__img
+	&__img {
+		width: 100%;
+		object-fit: cover;
+		transition: all $hoverTime ease;
+	}
+
+	// .product-item__content
+	&__content {
+		flex: 1 1 58%;
+		display: flex;
+		flex-direction: column;
+		padding: 0 10px;
+	}
+
+	// .product-item__subtitle
+	&__subtitle {
+		transform: translateX(50px);
+		margin: 0 0 20px 0;
+		font-size: 48px;
+		opacity: 0;
+		transition: all $hoverTime ease;
+
+		&.animation-class {
+			transform: translateX(0);
+			opacity: 1;
+		}
+
+		@include sm {
+			font-size: 32px;
+		}
+	}
+
+	// .product-item__inner
+	&__inner {
+		margin: 0 0 5px 0;
+		@include sm {
+			margin: 0 0 20px 0;
+		}
+	}
+	// .product-item__old-price
+	&__old-price {
+		font-size: 12px;
+		font-weight: 500;
+		color: $dark-97;
+	}
+
+	// .product-item__bottom
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		margin-top: auto;
+	}
+
+	// .product-item__description
+	&__description {
+		transform: translateY(-20px);
+
+		@include sm {
+			transform: translateY(0);
+		}
+	}
+
+	// .product-item__see-more
+	&__see-more {
+		position: relative;
+		display: inline-block;
+		margin: 0 0 20px 0;
+		padding: 0 40px 0 0;
+		color: $dark-97;
+		cursor: pointer;
+		border: 1px solid transparent;
+		transition: all $hoverTime ease;
+
+		&::after {
+			content: "";
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			top: 4px;
+			right: 0;
+			transform: rotate(45deg);
+			border-right: 2px solid $dark-97;
+			border-bottom: 2px solid $dark-97;
+			border-radius: 2px;
+			transition: all $hoverTime ease;
+		}
+
+		&:hover {
+			color: $brandHoverColor;
+
+			&:after {
+				border-color: $brandHoverColor;
+			}
+		}
+
+		&:active {
+			border-bottom-color: $brandHoverColor;
+		}
+
+		&:focus {
+			color: $brandHoverColor;
+			border-top-color: $brandHoverColor;
+			border-bottom-color: $brandHoverColor;
+
+			&:after {
+				border-color: $brandHoverColor;
+			}
+		}
+
+		&._active {
+			&::after {
+				transform: rotate(-135deg);
+				top: 7px;
+			}
+		}
+	}
+
+	// .product-item__text
+	&__text {
+		position: relative;
+		z-index: 0;
+		max-height: 0;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-20px);
+		transition: all $hoverTime ease;
+
+		&._show {
+			max-height: 100%;
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+	}
+
+	// .product-item__choise
+	&__choise {
+		max-width: 222px;
+		width: 100%;
+
+		@include sm {
+			margin: 0 0 20px 0;
+		}
+	}
+}

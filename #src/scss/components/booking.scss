@@ -1,0 +1,359 @@
+@import "../mixins";
+
+.booking {
+	position: relative;
+	max-width: 100%;
+	min-height: 925px;
+	background-image: url("../img/bg/review.jpg");
+	background-position: 0 0;
+	background-size: cover;
+	padding: 63px 0 55px;
+	overflow: hidden;
+	@include bg-cover;
+
+	@include lg {
+		background-image: url("../img/bg/review_tablet.jpg");
+	}
+
+	@include md {
+		min-height: 840px;
+		background-image: none;
+		padding: 28px 5px 4px;
+	}
+
+	@include sm {
+		padding: 25px 5px 4px;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $black-80;
+
+		@include md {
+			display: none;
+		}
+	}
+
+	// .booking__content
+	&__content {
+		position: relative;
+		z-index: 1;
+		max-width: 850px;
+		margin: 0 auto;
+		transform: translateX(-9px);
+		background-color: $white;
+		border-radius: 4px;
+		padding: 53px 0 66px;
+
+		@include lg {
+			transform: translateX(0);
+			max-width: 688px;
+		}
+		@include md {
+		}
+
+		@include sm {
+			padding: 10px 0 60px;
+		}
+	}
+
+	// .booking__subtitle
+	&__subtitle {
+		max-width: 375px;
+		display: block;
+		font-weight: 700;
+		font-size: 32px;
+		color: $blackTextColor;
+		text-align: center;
+		margin: 0 auto 15px;
+
+		@include sm {
+			font-size: 16px;
+			text-transform: uppercase;
+		}
+	}
+
+	// .booking__description
+	&__description {
+		display: block;
+		text-align: center;
+		margin: 0 auto 55px;
+
+		@include sm {
+			margin: 0 auto 21px;
+		}
+	}
+
+	// .booking__form
+	&__form {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	// .booking__block-input
+	&__block-input {
+		display: grid;
+		grid-template-areas: "name name" "date time";
+		grid-column-gap: 24px;
+
+		@include md {
+			grid-column-gap: 10px;
+		}
+
+		@include sm {
+			grid-template-areas: "name" "date" "time";
+		}
+	}
+
+	// .booking__label
+	&__label {
+		padding: 0;
+
+		&--name {
+			grid-column: name;
+		}
+
+		&--date,
+		&--time {
+			max-width: 288px;
+
+			@include md {
+				max-width: 100%;
+			}
+		}
+
+		&--date {
+			grid-column: date;
+
+			@include sm {
+				margin: 0 0 16px 0;
+			}
+		}
+
+		&--time {
+			grid-column: time;
+		}
+	}
+
+	// .booking__label-name
+	&__label-name {
+		display: block;
+		padding: 0 0 0 20px;
+
+		@include sm {
+			padding: 0 0 0 12px;
+		}
+	}
+
+	// .booking__input
+	&__input {
+		justify-content: start;
+		min-height: 44px;
+		margin: 0 0 24px 0;
+		color: $lightGrey;
+
+		&:focus-visible {
+			color: $brandColor;
+		}
+
+		@include sm {
+			margin: 0 0 15px 0;
+		}
+	}
+
+	&__input[type="time"] {
+		max-width: 288px;
+		width: 100%;
+	}
+
+	&__input[type="date"] {
+		max-width: 288px;
+		width: 100%;
+		margin: 0;
+	}
+
+	// .booking__button
+	&__button {
+		max-width: 165px;
+		margin: 0 auto;
+
+		@include sm {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	&__filter {
+		margin: 0 0 20px 0;
+
+		@include sm {
+			margin: 0 0 12px 0;
+		}
+	}
+}
+
+.filter {
+	// .filter--checkbox
+	&--checkbox {
+		margin: 0 0 31px 0;
+
+		@include sm {
+			margin: 0 0 28px 0;
+		}
+	}
+
+	// .filter__title
+	&__title {
+		padding: 0 0 0 20px;
+
+		@include sm {
+			padding: 0 0 0 10px;
+		}
+	}
+
+	// .filter__list
+	&__list {
+		min-height: 80px;
+		display: grid;
+		// grid-template-columns: repeat(2, 1fr);
+		// grid-template-rows: repeat(2, 1fr);
+
+		grid-template-columns: repeat(2, 1fr);
+		border: 1px solid $grey;
+		border-radius: 4px;
+		padding: 16px 24px;
+		grid-column-gap: 70px;
+
+		@include md {
+			grid-column-gap: 20px;
+		}
+
+		@include sm {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(auto, 1fr);
+			padding: 19px 14px;
+			line-height: 1.4;
+		}
+
+		// .filter__list--checkbox
+		&--checkbox {
+			min-height: 102px;
+			grid-template-rows: repeat(3, 1fr);
+		}
+	}
+
+	// .filter__item
+	&__item {
+		@include sm {
+			&:nth-child(5),
+			&:nth-child(6) {
+				display: none;
+			}
+		}
+	}
+
+	// .filter__name
+	&__name {
+		position: relative;
+		cursor: pointer;
+		transition: all $hoverTime ease;
+
+		@include md-min {
+			&:hover {
+				&::before {
+					border-color: $brandHoverColor;
+				}
+			}
+		}
+
+		&--radio,
+		&--checkbox {
+			position: relative;
+			display: flex;
+			align-items: center;
+
+			&::before {
+				content: "";
+				display: inline-block;
+				top: 0;
+				left: 0;
+				width: 18px;
+				height: 18px;
+				margin: 0 10px 0 0;
+				border: 2px solid $blackTextColor;
+				background-color: $white;
+				transition: all $hoverTime ease;
+			}
+
+			&::after {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				transition: all $hoverTime ease;
+			}
+		}
+
+		&--radio {
+			&::before {
+				border-radius: 100%;
+			}
+
+			&::after {
+				width: 10px;
+				height: 10px;
+				background-color: transparent;
+				border-radius: 100%;
+				transform: translateX(4px);
+			}
+		}
+
+		&--checkbox {
+			&::before {
+				border-radius: 2px;
+			}
+
+			&::after {
+				top: 2px;
+				left: 6px;
+				width: 7px;
+				height: 12px;
+				border: solid $white;
+				border-width: 0 2px 2px 0;
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+	// .filter__input
+	&__input {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+
+		@include md-min {
+			&:focus + .filter__name::before {
+				border-color: $brandColor !important ;
+			}
+
+			&:focus.filter__input[type="checkbox"]:checked + .filter__name::before {
+				border-color: $brandHoverColor !important ;
+			}
+		}
+
+		&[type="checkbox"]:checked + .filter__name--checkbox::before {
+			border-color: $brandColor;
+			background-color: $brandColor;
+		}
+
+		&[type="radio"]:checked + .filter__name--radio::after {
+			background-color: $brandColor;
+		}
+	}
+}

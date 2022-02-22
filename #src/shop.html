@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+@include('components/_head.html',{
+"title":"Shop"
+})
+
+<body>
+	<div class="wrapper">
+
+		<main class="_page">
+			@include('components/_header-shop.html',{})
+			@include('components/hero-shop.html',{})
+			@include('components/search.html',{})
+			@include('components/products-filter.html',{})
+			@include('components/products-shop.html',{})
+		</main>
+
+		@include('components/_footer-shop.html',{})
+	</div>
+
+	@include('components/_popup.html',{})
+
+	<script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+@import "../../mixins";
+
+.slider-team {
+	position: relative;
+	flex: 0 0 731px;
+	max-width: 731px;
+	min-width: 0;
+	padding: 50px 45px 0 45px;
+	margin: 0 0 40px 0;
+
+	@include xl {
+		max-width: 100%;
+		margin: 0 0 20px 0;
+	}
+
+	@include lg {
+		margin: 0 0 20px 0;
+	}
+
+	@include sm {
+		max-width: 100%;
+		padding: 0 22px 0 0;
+		margin: 0 0 17px -3px;
+	}
+}
+
+// .description
+.description {
+	display: block;
+	text-align: left;
+	max-width: 475px;
+	width: 100%;
+	overflow: auto;
+	min-height: 283px;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	@include xl {
+		padding: 0 0 0 20px;
+		margin: 0 auto;
+	}
+
+	@include lg {
+		padding: 0 0 0 48px;
+	}
+
+	@include sm {
+		padding: 0;
+	}
+
+	// .description__item
+	&__item {
+		position: relative;
+		line-height: 1.25;
+
+		& p {
+			position: absolute;
+			z-index: 2;
+			top: 50px;
+			left: 0;
+			width: 100%;
+			opacity: 0;
+			transition: opacity $hoverTime ease;
+
+			@include lg {
+				top: 26px;
+			}
+		}
+
+		&.tab_active .description__name {
+			opacity: 1;
+		}
+
+		&.tab_active p {
+			opacity: 1;
+		}
+	}
+
+	// .description__name
+	&__name {
+		position: absolute;
+		z-index: 3;
+		top: 0;
+		display: block;
+		font-weight: 700;
+		font-size: 32px;
+		padding: 0 0 10px 0;
+		line-height: 1.1;
+		color: $brandColor;
+		opacity: 0;
+		width: 100%;
+		background-color: $white;
+		transition: opacity $hoverTime ease;
+
+		@include xl {
+			font-size: 16px;
+		}
+		@include sm {
+			margin: 0 0 0 4px;
+		}
+	}
+}
