@@ -1,4 +1,3 @@
 # Barber Shop 
 
-> учебный проект 
-> магазин 
+-  [учебный проект магазин](https://sl101.github.io/BarberShop/)
