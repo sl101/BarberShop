@@ -1,3 +1,3 @@
 # Barber Shop 
 
--  [учебный проект магазин](https://github.com/sl101/BarberShop/tree/main/%23src)
+-  [учебный проект магазин](https://sl101.github.io/BarberShop/tree/main/%23src)
