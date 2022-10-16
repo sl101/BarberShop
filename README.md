@@ -1,6 +1,6 @@
 # Barber Shop
 
-- [учебный проект - магазин](https://sl101.github.io/BarberShop/app/index.html)
+- [учебный проект - магазин](https://sl101.github.io/BarberShop/app/)
 
 > Используется Gulp 4 <br>
 > Работает на Node.js версии 14 и ниже
